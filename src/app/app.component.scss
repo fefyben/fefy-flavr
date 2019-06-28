@@ -1,0 +1,24 @@
+@import '../flavr';
+
+mat-sidenav-container,
+mat-sidenav-content {
+  height: 100vh;
+}
+
+@media screen and (max-width: 599px) {
+  mat-sidenav-container {
+    padding: 89px 0;
+  }
+
+  .mat-sidenav {
+    // border-right: 1px solid $grey0;
+    padding: 89px 0;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  mat-sidenav-container {
+    padding: 96px 0;
+  }
+}

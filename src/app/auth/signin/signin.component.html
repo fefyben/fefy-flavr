@@ -1,0 +1,48 @@
+<section class="login">
+  <div class="login-icon">
+    <svg fxLayoutAlign="center" version="1.1" viewBox="0 0 89 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="a" y1="24.145%" y2="75.855%">
+          <stop stop-color="#619756" offset="0"/>
+          <stop stop-color="#D6E8BA" offset="1"/>
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+        <path d="m57.803 13.734c-22.035 0.10917-33.475 2.5664-34.32 7.3717-1.2683 7.2137 20.902 10.659 49.496 6.8394-5.1403 2.5424-13.333 3.8894-24.577 4.0412-20.179 0.27229-40.42-3.5166-44.153-7.7566-3.8364-4.357 9.2254-9.1891 17.407-10.496 10.751-1.717 22.802-1.719 36.154-0.0058769 4.267-3.743 8.2435-6.7883 11.93-9.1359 10.92-6.955 15.34-4.1997 17.115-3.2475 1.7753 0.9522 6.4127 5.8858-7.9362 9.9047-9.5659 2.6792-19.402 7.8184-29.51 15.418h-4.9091c4.7104-4.9735 9.1448-9.2844 13.303-12.933zm-57.803 14.711c2.2667 0.87688 7.3512 3.1377 15.253 6.7826 11.853 5.4673 9.2952 23.373 25.941 24.599 19.529 1.4381 28.226-26.296 28.226-25.916 0 2.3308-5.5679 32.883-34.478 29.883-20.456-2.1226-32.103-13.905-34.942-35.349z" fill="url(#a)"/>
+      </g>
+    </svg>
+  </div>
+
+  <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h2>Login</h2>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Enter your email"
+        required
+        email
+        ngModel name="email">
+    </mat-form-field>
+
+    <mat-form-field hintLabel="Min 6 characters">
+      <input
+        matInput
+        #input
+        required
+        minlength="6"
+        placeholder="Enter your password"
+        [type]="hide ? 'password' : 'text'"
+        ngModel name="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-hint align="end">{{ input.value?.length || 0 }}</mat-hint>
+    </mat-form-field>
+    <button
+      class="submit"
+      mat-raised-button color="accent"
+      type="submit">Log in</button>
+  </form>
+</section>
+
+
