@@ -14,6 +14,7 @@ import { HomeComponent } from './core/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
+import { CarouselComponent } from './core/home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SidenavComponent } from './core/sidenav/sidenav.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
-    <div fxLayoutAlign="space-between" class="newsletter-social">
-      <form fxLayoutGap="24px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div fxLayoutAlign.gt-xs="end" fxLayoutAlign.xs="center" class="newsletter-social">
+      <!-- <form fxLayoutGap="24px" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field>
           <input
             matInput
@@ -14,8 +14,8 @@
           class="submit"
           mat-raised-button color="accent"
           type="submit">Newsletter</button>
-      </form>
-      <ul fxLayout fxLayoutGap="24px" class="navigation-items">
+      </form> -->
+      <ul fxLayout fxLayoutGap="24px" fxLayoutAlign="center" class="navigation-items">
         <li fxLayout="column" fxLayoutAlign="center">
           <a href="https://www.instagram.com/fefy" target="_blank"><i class="fab fa-instagram"></i></a>
         </li>
@@ -26,9 +26,9 @@
           <a href="https://github.com/fefyben" target="_blank"><i class="fab fa-github"></i></a>
         </li>
       </ul>
-    </div>
-    <div class="footer-text">
-      <p>Fernanda Benites &copy; 2019</p>
+      <div class="footer-text">
+        <p>Fernanda Benites &copy; 2019</p>
+      </div>
     </div>
   </div>
 </footer>
